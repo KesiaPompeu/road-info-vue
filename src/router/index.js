@@ -1,41 +1,28 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-Vue.use(VueRouter)
-import DashboardLayout from '../layouts/DashboardLayout'
-import Dashboard from '../views/main/Dashboard'
+import Vue from "vue";
+import VueRouter from "vue-router";
+Vue.use(VueRouter);
+import DashboardLayout from "../layouts/DashboardLayout";
 
 const routes = [
   {
-    path:"/",
-    component:DashboardLayout,
-    props:true,
+    path: "/",
+    component: DashboardLayout,
+    props: true,
     meta: {
       requiresAuth: true,
     },
-    children:[
-      
+    children: [
       {
-         path: '/',
-          name: 'home',
-         
-          component: () => import( '../views/main/Dashboard.vue')
-         },
-        
-          {
-            path: '/stats',
-            name: 'stats',
-           
-            component: () => import('../views/Stats.vue')
-          }
-      
-      
-    ]
+        path: "/",
+        name: "home",
+        component: () => import("../views/main/Dashboard.vue"),
+      },
+    ],
   },
- 
-]
+];
 
 const router = new VueRouter({
-  routes
-})
+  routes,
+});
 
-export default router
+export default router;
