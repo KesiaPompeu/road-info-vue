@@ -73,7 +73,7 @@
             </v-card>
           </div>
           <div class="d-flex px-10 mt-5">
-            <v-card width="120" color="#ffffff47" v-if="item.main">
+            <v-card width="120" color="#ffffff47" >
               <v-card-title class="justify-center"
                 ><v-icon color="black" x-large>mdi-thermometer</v-icon></v-card-title
               >
@@ -84,7 +84,7 @@
                 item.remainDistance
               }}</v-card-title>
             </v-card>
-            <v-card width="120" class="ml-5" color="#ffffff47" v-if="item.wind">
+            <v-card width="120" class="ml-5" color="#ffffff47" >
               <v-card-title class="justify-center">
                 <v-icon color="black" x-large >mdi-weather-windy-variant</v-icon>
               </v-card-title>
@@ -93,7 +93,7 @@
                 item.length
               }}</v-card-title>
             </v-card>
-            <v-card width="120" class="ml-5" color="#ffffff47" v-if="item.main">
+            <v-card width="120" class="ml-5" color="#ffffff47" >
               <v-card-title class="justify-center">
                 <v-icon x-large color="black">mdi-speedometer</v-icon>
               </v-card-title>
