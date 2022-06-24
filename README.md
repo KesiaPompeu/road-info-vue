@@ -1,4 +1,4 @@
-# carma-project
+# weather-app
 
 ## Project setup
 ```

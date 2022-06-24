@@ -1,32 +1,67 @@
 <template>
-  <div id="app">
-    <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </nav>
-    <router-view/>
-  </div>
+  <v-app>
+    <!-- <v-app-bar app  dark>
+      <div class="d-flex align-center">
+        <v-img
+          alt="Vuetify Logo"
+          class="shrink mr-2"
+          contain
+          src="./assets/unnamed-removebg-preview.png"
+          transition="scale-transition"
+          width="170"
+        />
+      </div>
+
+      <v-spacer></v-spacer>
+
+      <v-btn to="/" tile text> Home </v-btn>
+      <v-btn to="/details/" text tile> Details </v-btn>
+      <v-btn to="/stats" text tile> Stats </v-btn>
+      <v-spacer></v-spacer>
+    </v-app-bar> -->
+
+    <v-main class="">
+      <router-view />
+    </v-main>
+  </v-app>
 </template>
 
+<script>
+export default {
+  name: "App",
+
+  data: () => ({
+    //
+  }),
+};
+</script>
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+.background {
+  /* background-image: url("../src/assets/Dark.webp"); */
+  background-size: cover;
+  /* opacity:0.5 */
 }
-
-nav {
-  padding: 30px;
+.v-text-field--outlined fieldset {
+  color: #000 !important;
+  border-radius: 0px !important;
 }
-
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
+.v-input input {
+  max-height: 32px;
+  color: #fff !important;
 }
-
-nav a.router-link-exact-active {
-  color: #42b983;
+.date.v-input input {
+  max-height: 32px;
+  color: #ffffff !important;
+}
+.v-select__selection,
+.v-select__selection--comma,
+.v-select.v-text-field input {
+  color: #ffffff !important;
+}
+.v-text-field--outlined.v-input--dense .v-label {
+  color: #ffffff !important;
+}
+.v-icon.notranslate.mdi.mdi-menu-down.theme--light {
+  color: #ffffff !important;
 }
 </style>
